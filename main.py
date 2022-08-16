@@ -86,18 +86,18 @@ def encrypt_message():
 def decrypt_message():
     d = find_d(e, phi)
     # input message to decrypt here with no special characters or punctuation, just numbers and spaces
-    input1 = 'Input message to decrypt here.'
+    input1 = 'Enter message to decrypt here: ' 
     input1 = encrypt_string_to_list(input1)
     input1 = decrypt_list(input1, d, n)
     input1 = list_to_string(input1)
-    print(input1)
+    print('Decrypted: ', input1)
 
 
 def main():
     while True:
         print("Welcome to the RSA encryption program!")
         print("Please select an option:")
-        print("You have to manaully enter the message to be decrypted in line 88 of this code.")
+        print("You have to manaully enter the message to be decrypted in line 89 of this code.")
         print("d = ", find_d(e, phi))
         input3 = input(
             "Enter 'e' to encrypt a message, 'd' to decrypt a message, or 'q' to quit: ")
